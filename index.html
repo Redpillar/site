@@ -15,7 +15,7 @@
             .ii{position:relative; display:inline-block;}
             .ii:after{content:""; position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); display:block }
             .ii.f:after{display:none;}
-            .bar{position:fixed; width:100%; bottom:calc(150px + env(safe-area-inset-bottom)); height:30px; background:rgba(0,0,0,0.3)}
+            .bar{position:fixed; width:100%; z-index:10000; bottom:calc(150px + env(safe-area-inset-bottom)); height:30px; background:rgba(0,0,0,0.3)}
             .bar > .had{position:absolute; top:0; left:0; width:100%; height:30px; background:red;}
         </style>
         <script>
@@ -62,9 +62,10 @@
                     var ev = e.touches[0];
                     var diff = point.sy - ev.clientY;
                     var h = ((point.sh + diff) < 30)?30:(point.sh + diff);
-                    var max = (window.innerHeight - 230) / (window.innerHeight * 0.01);
-                    if(h >= max) h = max;
+                    var max = (window.innerHeight - 160) / (window.innerHeight * 0.01);
                     var ph = h / (window.innerHeight * 0.01);
+                    if(ph >= max) ph = max;
+                    console.log("max : " + max);
                     document.getElementsByClassName("bar")[0].style.height = ph + "%";
                     point.h = h;
                     point.diff = diff;
