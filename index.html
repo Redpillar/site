@@ -53,7 +53,6 @@
                 window.addEventListener("touchmove",m);
                 window.addEventListener("touchend",function(e){
                     window.removeEventListener("touchmove",m);
-                    $h.removeEventListener("touchstart",s);
                     console.log("end!!!")
                 });
                 function s(e){
@@ -75,7 +74,6 @@
                     point.diff = diff;
                     console.log(ph)
 
-/*
                     var d = document.getElementsByClassName("btnWrap")[0];
                     var s = window.getComputedStyle(document.body)
                     var txt = "";
@@ -122,10 +120,10 @@
             <p>
             </p>
             <div class="ii">
-                1. <input type="text" class="n1">
+                0. <input type="text" class="n1">
             </div>
             <div>
-                2. <input type="text" >
+                00. <input type="text" >
             </div>
             <div class="btnWrap"></div>
         </div>
