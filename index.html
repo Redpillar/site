@@ -12,17 +12,10 @@
             window.onload = function(){
                 var $input = document.querySelectorAll("input");
                 for(var i=0; i<0; i++){
-                    $input[i].addEventListener("focus",function(){
-                        let content = document.querySelector('meta[name="viewport"]').getAttribute("content");
-                        console.log(content)
-                        content = String(content).replace(/(user\-scalable ?\= ?).*/g,'$1no');
-                        document.querySelector('meta[name="viewport"]').setAttribute("content",content)
+                    $input[i].addEventListener("focus",function(e){
+                        e.preventDefault();
                     });
                     $input[i].addEventListener("blur",function(){
-                        let content = document.querySelector('meta[name="viewport"]').getAttribute("content");
-                        console.log(content)
-                        content = String(content).replace(/(user\-scalable ?\= ?).*/g,'$1yes');
-                        document.querySelector('meta[name="viewport"]').setAttribute("content",content)
                     });
                 };
                 document.querySelector("button").addEventListener("click",function(){
@@ -38,7 +31,7 @@
     <body>
         <button>ok</button>
         <p>
-        change yes
+        preventDefault yes
         </p>
         <input type="text" class="n1">
         <input type="text" >
