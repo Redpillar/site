@@ -7,6 +7,8 @@
             html{font-size:1px;}
             body{font-size:16rem;}
             .n1{font-size:13rem;}
+            .box{height:200px;}
+            .btnWrap{position:fixed; bottom:calc(env(safe-area-inset-bottom) + 0%); left:0; width:100vw; height:30px; background:red;}
         </style>
         <script>
             window.onload = function(){
@@ -40,13 +42,16 @@
         </script>
     </head>
     <body>
-        <button>change no</button>
-        <button>change yes</button>
-        <p>
-        vdkdkdk
-        </p>
-        1<input type="text" class="n1">
-        2<input type="text" >
+        <div class="box">
+            <button>change no</button>
+            <button>change yes</button>
+            <p>
+            vdkdkdk
+            </p>
+            1<input type="text" class="n1">
+            2<input type="text" >
+            <div class="btnWrap"></div>
+        </div>
 
     </body>
 </html>
