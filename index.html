@@ -19,15 +19,19 @@
                 for(var i=0; i<$input.length; i++){
                     $input[i].addEventListener("focus",function(e){
                     });
-                    $input[i].addEventListener("blur",function(){
+                    $input[i].addEventListener("blur",function(e){
                         view("yes");
                     });
                 };
                 var ii = document.getElementsByClassName("ii");
                 for(i=0; i<ii.length; i++){
-                    ii[0].addEventListener("click",function(e){
+                    ii[i].addEventListener("click",function(e){
+                        e.target.classList.add("f")
                         view("no");
                         console.log(e.target.children[0].focus());
+                    });
+                    ii[i].children[0].addEventListener("blur",function(e){
+                        e.target.parentNode.classList.remove("f");
                     });
                 }
                 document.querySelectorAll("button")[0].addEventListener("click",function(){
@@ -63,10 +67,10 @@
             <p>
             </p>
             <div class="ii">
-                1. <input type="text" class="n1">
+                3. <input type="text" class="n1">
             </div>
             <div>
-                2. <input type="text" >
+                4. <input type="text" >
             </div>
             <div class="btnWrap"></div>
         </div>
