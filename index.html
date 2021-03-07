@@ -50,19 +50,13 @@
                 var $h = document.getElementsByClassName("had")[0];
                 var point = {};
                 $h.addEventListener("touchstart",s);
-                window.addEventListener("touchmove",m);
-                window.addEventListener("touchend",function(e){
-                    window.removeEventListener("touchmove",m);
-                    console.log("end!!!")
-                });
                 function s(e){
                     var ev = e.touches[0];
                     console.log(ev);
                     e.preventDefault();
                     point.sy = ev.clientY;
                     point.sh = e.target.parentNode.clientHeight;
-                    console.log(point.sy);
-                    console.log(e.target.parentNode.clientHeight);
+                    window.addEventListener("touchmove",m);
                 };
                 function m(e){
                     var ev = e.touches[0];
@@ -72,7 +66,7 @@
                     document.getElementsByClassName("bar")[0].style.height = ph + "%";
                     point.h = h;
                     point.diff = diff;
-                    console.log(ph)
+//                    console.log(ph)
 
                     var d = document.getElementsByClassName("btnWrap")[0];
                     var s = window.getComputedStyle(document.body)
@@ -80,15 +74,14 @@
                     for(var key in window.screen){
                         txt += key + " : " + window.screen[key] + ";  "
                     }
-                    console.log(window.screen);
+//                    console.log(window.screen);
                     d.innerHTML = "w.innerH : " + window.innerHeight + ";  " + txt + " scrollTop : " + window.scrollY;
-                    */
-
-
-
+                    window.addEventListener("touchend",end);
                 };
                 function end(e){
-                    window.removeEventListener("touchmove","m");
+                    window.removeEventListener("touchmove",m);
+                    window.removeEventListener("touchend",end);
+                    console.log("touch end even fodd")
                 };
             }
             function view(sw){
@@ -120,10 +113,10 @@
             <p>
             </p>
             <div class="ii">
-                0. <input type="text" class="n1">
+                1. <input type="text" class="n1">
             </div>
             <div>
-                00. <input type="text" >
+                2. <input type="text" >
             </div>
             <div class="btnWrap"></div>
         </div>
