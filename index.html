@@ -7,7 +7,7 @@
             html, body{height:100%;}
             html{font-size:1px;}
             body{font-size:16rem;}
-            .header{height:50px; padding-top:nav(sate-area-inset-top);}
+            .header{height:50px; padding-top:env(sate-area-inset-top);}
             .header > .inr{position:fixed; top:0; left:0; z-index:200; width:100%;  height:50px; padding-top:nav(sate-area-inset-top); text-align:center; color:#fff; font-weight:bold; background:rgba(0,0,0,0.9);}
             .n1{font-size:13rem;}
             .box{height:200%;}
@@ -15,6 +15,8 @@
             .ii{position:relative; display:inline-block;}
             .ii:after{content:""; position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); display:block }
             .ii.f:after{display:none;}
+            .bar{position:fixed; width:100%; bottom:calc(150px + env(safe-area-inset-bottom)); height:30px; background:rgba(0,0,0,0.3)}
+            .bar > .had{position:absolute; top:0; left:0; width:100%; height:30px; background:red;}
         </style>
         <script>
             window.onload = function(){
@@ -44,7 +46,52 @@
                 document.querySelectorAll("button")[1].addEventListener("click",function(){
                     view("yes");
                 });
-                view("yes")
+                view("yes");
+                var $h = document.getElementsByClassName("had")[0];
+                var point = {};
+                $h.addEventListener("touchstart",s);
+                window.addEventListener("touchmove",m);
+                window.addEventListener("touchend",function(e){
+                    window.removeEventListener("touchmove",m);
+                    $h.removeEventListener("touchstart",s);
+                    console.log("end!!!")
+                });
+                function s(e){
+                    var ev = e.touches[0];
+                    console.log(ev);
+                    e.preventDefault();
+                    point.sy = ev.clientY;
+                    point.sh = e.target.parentNode.clientHeight;
+                    console.log(point.sy);
+                    console.log(e.target.parentNode.clientHeight);
+                };
+                function m(e){
+                    var ev = e.touches[0];
+                    var diff = point.sy - ev.clientY;
+                    var h = ((point.sh + diff) < 30)?30:(point.sh + diff);
+                    var ph = h / (window.innerHeight * 0.01);
+                    document.getElementsByClassName("bar")[0].style.height = ph + "%";
+                    point.h = h;
+                    point.diff = diff;
+                    console.log(ph)
+
+/*
+                    var d = document.getElementsByClassName("btnWrap")[0];
+                    var s = window.getComputedStyle(document.body)
+                    var txt = "";
+                    for(var key in window.screen){
+                        txt += key + " : " + window.screen[key] + ";  "
+                    }
+                    console.log(window.screen);
+                    d.innerHTML = "w.innerH : " + window.innerHeight + ";  " + txt + " scrollTop : " + window.scrollY;
+                    */
+
+
+
+                };
+                function end(e){
+                    window.removeEventListener("touchmove","m");
+                };
             }
             function view(sw){
                 let content = document.querySelector('meta[name="viewport"]').getAttribute("content");
@@ -62,7 +109,7 @@
                         txt += key + " : " + window.screen[key] + ";  "
                     }
                     console.log(window.screen);
-                    d.innerHTML = "w.innerW : " + window.innerHeight + ";  " + txt + " scrollTop : " + window.scrollY;
+                    d.innerHTML = "w.innerH : " + window.innerHeight + ";  " + txt + " scrollTop : " + window.scrollY;
                 });
             }
         </script>
@@ -81,6 +128,9 @@
                 2. <input type="text" >
             </div>
             <div class="btnWrap"></div>
+        </div>
+        <div class="bar">
+            <div class="had"></div>
         </div>
 
     </body>
