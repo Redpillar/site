@@ -1,16 +1,35 @@
 <!doctype html>
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no" viewport-fit="cover">
+        <meta name="viewport" content="width=device-width, height=device-height, user-scalable=yes" viewport-fit="cover">
         <style>
             *{padding:0; margin:0;}
             html{font-size:1px;}
             body{font-size:16rem;}
-            n1.{font-size:13rem;}
+            .n1{font-size:13rem;}
         </style>
+        <script>
+            window.onload = function(){
+                var $input = document.querySelectorAll("input");
+                for(var i=0; i<$input.length; i++){
+                    $input[i].addEventListener("focus",function(){
+                        let content = document.querySelector('meta[name="viewport"]').getAttribute("content");
+                        console.log(content)
+                        content = String(content).replace(/(user\-scalable ?\= ?).*/g,'$1no');
+                        document.querySelector('meta[name="viewport"]').setAttribute("content",content)
+                    });
+                    $input[i].addEventListener("blur",function(){
+                        let content = document.querySelector('meta[name="viewport"]').getAttribute("content");
+                        console.log(content)
+                        content = String(content).replace(/(user\-scalable ?\= ?).*/g,'$1yes');
+                        document.querySelector('meta[name="viewport"]').setAttribute("content",content)
+                    });
+                };
+            }
+        </script>
     </head>
     <body>
-        111
+        event on
         <input type="text" class="n1">
         <input type="text" >
     </body>
