@@ -25,11 +25,21 @@
                         document.querySelector('meta[name="viewport"]').setAttribute("content",content)
                     });
                 };
+                document.querySelector("button").addEventListener("click",function(){
+                    let content = document.querySelector('meta[name="viewport"]').getAttribute("content");
+                    console.log(content);
+                    content = String(content).replace(/(user\-scalable ?\= ?).*/g,'$1yes');
+                    document.querySelector('meta[name="viewport"]').setAttribute("content",content)
+                    document.querySelector("p").innerHTML = content
+                });
             }
         </script>
     </head>
     <body>
-        return
+        <button>ok</button>
+        <p>
+        akakak
+        </p>
         <input type="text" class="n1">
         <input type="text" >
     </body>
