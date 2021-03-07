@@ -33,7 +33,6 @@
                 console.log("===================================================");
                 console.log("original content : " + content);
                 content = String(content).replace(/(user\-scalable ?\= ?)\w+ ?/g,'$1'+sw);
-                console.log(typeof n);
                 document.querySelector('meta[name="viewport"]').setAttribute("content",content)
                 console.log("change content : " + content);
                 document.querySelector("p").innerHTML = content;
