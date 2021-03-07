@@ -39,6 +39,13 @@
                 document.querySelector('meta[name="viewport"]').setAttribute("content",content)
                 console.log("change content : " + content);
                 document.querySelector("p").innerHTML = content;
+                window.addEventListener("scroll",function(e){
+                    var d = document.getElementsByClassName("btnWrap")[0];
+                    var s = window.getComputedStyle(document.body)
+                    console.log(window.screen);
+                    d.innerHTML = window.innerHeight + " : " + window.screen.availHeight
+                    console.log(window.scrollY);
+                });
             }
         </script>
     </head>
