@@ -62,11 +62,12 @@
                     var ev = e.touches[0];
                     var diff = point.sy - ev.clientY;
                     var h = ((point.sh + diff) < 30)?30:(point.sh + diff);
+                    var max = (window.innerHeight - 230) / (window.innerHeight * 0.01);
+                    if(h >= max) h = max;
                     var ph = h / (window.innerHeight * 0.01);
                     document.getElementsByClassName("bar")[0].style.height = ph + "%";
                     point.h = h;
                     point.diff = diff;
-//                    console.log(ph)
 
                     var d = document.getElementsByClassName("btnWrap")[0];
                     var s = window.getComputedStyle(document.body)
