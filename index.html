@@ -19,6 +19,7 @@
                 var $input = document.querySelectorAll("input");
                 for(var i=0; i<$input.length; i++){
                     $input[i].addEventListener("focus",function(e){
+                        view("no");
                     });
                     $input[i].addEventListener("blur",function(e){
                         view("yes");
@@ -59,8 +60,7 @@
                         txt += key + " : " + window.screen[key] + ";  "
                     }
                     console.log(window.screen);
-                    d.innerHTML = window.innerHeight + " : " + txt
-                    console.log(window.scrollY);
+                    d.innerHTML = "w.innerW : " + window.innerHeight + ";  " + txt + " scrollTop : " + window.scrollY;
                 });
             }
         </script>
