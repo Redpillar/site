@@ -23,23 +23,22 @@
                 document.querySelector("button").addEventListener("click",function(){
                     view("no");
                 });
+                view("yes")
             }
             function view(sw){
                 let content = document.querySelector('meta[name="viewport"]').getAttribute("content");
                 console.log("===================================================");
                 console.log("original content : " + content);
                 content = String(content).replace(/(user\-scalable ?\= ?)\w+ ?/g,'$1'+sw);
-                var n = String(content).replace(/(user\-scalable ?\= ?)(\w{2,3})/g,"$1"+sw)
-                console.log(n);
                 console.log(typeof n);
                 document.querySelector('meta[name="viewport"]').setAttribute("content",content)
                 console.log("change content : " + content);
-                    document.querySelector("p").innerHTML = content;
+                document.querySelector("p").innerHTML = content;
             }
         </script>
     </head>
     <body>
-        <button>ok</button>
+        <button>change </button>
         <p>
         vdkdkdk
         </p>
