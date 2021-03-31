@@ -1,6 +1,6 @@
 <!doctype html>
 <html>
-    <head>
+    <header>
         <meta name="viewport" content="width=device-width, height=device-height, user-scalable=yes, maximum-scale=3, minimum-scale=1 initial-scale=1">
         <style>
             *{padding:0; margin:0;}
@@ -90,6 +90,16 @@
                     window.removeEventListener("touchend",end);
                     console.log("touch end even fodd")
                 };
+                var $s = document.querySelectorAll(".sel")[0];
+                var $box = document.querySelectorAll(".ex")[0];
+                $s.addEventListener("change",function(){
+                    var ev = document.createEvent("HTMLEvents");
+                    ev.initEvent("ex",true,true);
+                    $box.dispatchEvent(ev);
+                })
+                $box.addEventListener("ex",function(e){
+                    e.target.children[0].focus();
+                })
             }
             function view(sw){
                 let content = document.querySelector('meta[name="viewport"]').getAttribute("content");
@@ -111,10 +121,20 @@
                 });
             }
         </script>
-    </head>
+    </header>
     <body>
         <div class="header"><div class="inr">header</div></div>
         <div class="box">
+            <select class="sel">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+            <div class="ex">
+                <input type="number">
+            </div>
             <button>change no</button>
             <button>change yes</button>
             <p>
