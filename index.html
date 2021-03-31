@@ -24,20 +24,22 @@
         </style>
         <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
         <script>
-            $.fn.setCursorPosition = function( pos ){
-            this.each( function( index, elem ) {
-                if( elem.setSelectionRange ) {
-                    elem.setSelectionRange(pos, pos);
-                } else if( elem.createTextRange ) {
-                    var range = elem.createTextRange();
-                    range.collapse(true);
-                    range.moveEnd('character', pos);
-                    range.moveStart('character', pos);
-                    range.select();
-                }
-            });
-            
-            return this;
+
+            $.fn.setCursorPosition = function( pos )
+            {
+                this.each( function( index, elem ) {
+                    if( elem.setSelectionRange ) {
+                        elem.setSelectionRange(pos, pos);
+                    } else if( elem.createTextRange ) {
+                        var range = elem.createTextRange();
+                        range.collapse(true);
+                        range.moveEnd('character', pos);
+                        range.moveStart('character', pos);
+                        range.select();
+                    }
+                });
+                
+                return this;
             };
             $(function(){
                 $(".sel").change(function(){
@@ -175,7 +177,7 @@
                     <option>4</option>
                     <option>5</option>
                 </select>
-                <input class="in" type="number">
+                <input class="in" type="text">
             </div>
             <button>change no</button>
             <button>change yes</button>
