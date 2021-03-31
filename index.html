@@ -94,22 +94,17 @@
                 var $box = document.querySelectorAll(".ex")[0];
                 $s.addEventListener("change",function(){
                     var ev = document.createEvent("HTMLEvents");
-                    ev.initEvent("ex",true,true);
-                    $box.click();
+                    ev.initEvent("mousedown",true,true);
+                    $box.children[1].dispatchEvent(ev);
                 })
-                $box.addEventListener("click",function(e){
-                    e.target.children[1].focus();
+                $box.children[1].addEventListener("mousedown",function(e){
+                    e.target.focus();
+                })
+                $box.addEventListener("mousedown",function(e){
+//                    e.target.children[1].focus();
                     document.querySelectorAll(".ox")[0].innerHTML = "하이제니"
                 })
                 $box.click();
-                var ttt;
-                var n =0;
-                ttt = setInterval(function(){
-                    n++;
-                    $box.children[1].focus();
-                    document.querySelectorAll(".ox")[0].innerHTML = n + "번째";
-                    if(n == 100) clearInerval(ttt);
-                },500)
             }
             function view(sw){
                 let content = document.querySelector('meta[name="viewport"]').getAttribute("content");
