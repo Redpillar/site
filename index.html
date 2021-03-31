@@ -105,6 +105,7 @@
                     var ev = document.createEvent("HTMLEvents");
                     ev.initEvent("focus",true,true);
                     $box.children[1].dispatchEvent(ev);
+                    $box.children[1].value = 1818181818
                 })
                 $box.children[1].addEventListener("focus",function(e){
                     console.log(e.target.focus());
