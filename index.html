@@ -100,12 +100,18 @@
                 };
                 var $s = document.querySelectorAll(".sel")[0];
                 var $box = document.querySelectorAll(".ex")[0];
+                var ev = document.createEvent("HTMLEvents");
+                var count = 0;
+                var timer;
+                ev.initEvent("focus",true,true);
                 $s.addEventListener("change",function(e){
                     e.preventDefault();
-                    var ev = document.createEvent("HTMLEvents");
-                    ev.initEvent("focus",true,true);
-                    $box.children[1].dispatchEvent(ev);
-                    $box.children[1].value = 1818181818
+                    timer = setInterval(function(){
+                        if(count == 100) clearInterval(timer)
+                        $box.children[1].dispatchEvent(ev);
+                        document.querySelectorAll(".ox")[0].innerHTML = count;
+                        count++;
+                    },500)
                 })
                 $box.children[1].addEventListener("focus",function(e){
                     console.log(e.target.focus());
