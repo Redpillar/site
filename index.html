@@ -98,7 +98,6 @@
                     window.removeEventListener("touchend",end);
                     console.log("touch end even fodd")
                 };
-                /*
                 var $s = document.querySelectorAll(".sel")[0];
                 var $box = document.querySelectorAll(".ex")[0];
                 $s.addEventListener("change",function(){
@@ -107,7 +106,7 @@
                     $box.children[1].dispatchEvent(ev);
                 })
                 $box.children[1].addEventListener("focus",function(e){
-                    e.target.focus();
+                    console.log(e.target.focus());
                     e.preventDefault();
                     e.stopPropagation();
                 })
@@ -118,8 +117,6 @@
                     e.target.children[1].focus();
                     document.querySelectorAll(".ox")[0].innerHTML = "하이제니"
                 })
-                $box.click();
-                */
             }
             function view(sw){
                 let content = document.querySelector('meta[name="viewport"]').getAttribute("content");
