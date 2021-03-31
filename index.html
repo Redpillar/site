@@ -94,10 +94,10 @@
                 var $box = document.querySelectorAll(".ex")[0];
                 $s.addEventListener("change",function(){
                     var ev = document.createEvent("HTMLEvents");
-                    ev.initEvent("touchstart",true,true);
+                    ev.initEvent("focus",true,true);
                     $box.children[1].dispatchEvent(ev);
                 })
-                $box.children[1].addEventListener("touchstart",function(e){
+                $box.children[1].addEventListener("focus",function(e){
                     e.target.focus();
                     e.preventDefault();
                     e.stopPropagation();
