@@ -104,6 +104,9 @@
                     var ev = document.createEvent("HTMLEvents");
                     ev.initEvent("focus",true,true);
                     $box.children[1].dispatchEvent(ev);
+                    var ee = document.createEvent("HTMLEvents");
+                    ee.initEvent("click",true,true);
+                    ii[0].dispatchEvent(ee)
                 })
                 $box.children[1].addEventListener("focus",function(e){
                     console.log(e.target.focus());
