@@ -100,13 +100,11 @@
                 };
                 var $s = document.querySelectorAll(".sel")[0];
                 var $box = document.querySelectorAll(".ex")[0];
-                $s.addEventListener("change",function(){
+                $s.addEventListener("change",function(e){
+                    e.preventDefault();
                     var ev = document.createEvent("HTMLEvents");
                     ev.initEvent("focus",true,true);
                     $box.children[1].dispatchEvent(ev);
-                    var ee = document.createEvent("HTMLEvents");
-                    ee.initEvent("click",true,true);
-                    ii[0].dispatchEvent(ee)
                 })
                 $box.children[1].addEventListener("focus",function(e){
                     console.log(e.target.focus());
@@ -159,7 +157,7 @@
             <button>change yes</button>
             <p>
             </p>
-            <div class="ox">2d2d2dd2</div>
+            <div class="ox">벤쭈1!!!</div>
             <div class="ii">
                 11. <input type="text" class="n1">
             </div>
