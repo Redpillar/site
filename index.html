@@ -23,6 +23,7 @@
             .bar > .btnWrap_p{height:calc(100% - 60px); padding-top:30px; overflow:hidden;}
         </style>
         <script>
+            webview.keyboardDisplayRequiresUserAction = NO;
             window.onload = function(){
                 var $input = document.querySelectorAll("input");
                 for(var i=0; i<$input.length; i++){
