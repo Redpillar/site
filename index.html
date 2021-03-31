@@ -25,10 +25,9 @@
         <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
         <script>
             $(function(){
-                $(".in").trigger("focus")
-                $(".in").trigger("mousedown")
-                $(".in").trigger("touchstart")
-                $(".in").trigger("click")
+                $(".sel").change(function(){
+                    $(".in").focus();
+                })
             })
         </script>
         <script>
