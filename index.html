@@ -95,10 +95,10 @@
                 $s.addEventListener("change",function(){
                     var ev = document.createEvent("HTMLEvents");
                     ev.initEvent("ex",true,true);
-                    $box.dispatchEvent(ev);
+                    $box.click();
                 })
-                $box.addEventListener("ex",function(e){
-                    e.target.children[0].focus();
+                $box.addEventListener("click",function(e){
+                    e.target.children[1].focus();
                     document.querySelectorAll(".ox")[0].innerHTML = "dkdkdk"
                 })
             }
@@ -126,14 +126,14 @@
     <body>
         <div class="header"><div class="inr">header</div></div>
         <div class="box">
-            <select class="sel">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-            </select>
             <div class="ex">
+                <select class="sel">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
                 <input type="number">
             </div>
             <button>change no</button>
