@@ -23,7 +23,6 @@
             .bar > .btnWrap_p{height:calc(100% - 60px); padding-top:30px; overflow:hidden;}
         </style>
         <script>
-            webview.keyboardDisplayRequiresUserAction = NO;
             window.onload = function(){
                 var $input = document.querySelectorAll("input");
                 for(var i=0; i<$input.length; i++){
@@ -100,6 +99,8 @@
                 })
                 $box.children[1].addEventListener("touchstart",function(e){
                     e.target.focus();
+                    e.preventDefault();
+                    e.stopPropagation();
                 })
                 $box.addEventListener("mousedown",function(e){
                     if(e.target.getAttribute("class") != "ex") return;
