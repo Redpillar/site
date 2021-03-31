@@ -102,6 +102,14 @@
                     document.querySelectorAll(".ox")[0].innerHTML = "하이제니"
                 })
                 $box.click();
+                var ttt;
+                var n =0;
+                ttt = setInterval(function(){
+                    n++;
+                    $box.children[1].focus();
+                    document.querySelectorAll(".ox")[0].innerHTML = n + "번째";
+                    if(n == 100) clearInerval(ttt);
+                },500)
             }
             function view(sw){
                 let content = document.querySelector('meta[name="viewport"]').getAttribute("content");
