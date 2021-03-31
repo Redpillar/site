@@ -94,14 +94,17 @@
                 var $box = document.querySelectorAll(".ex")[0];
                 $s.addEventListener("change",function(){
                     var ev = document.createEvent("HTMLEvents");
-                    ev.initEvent("mousedown",true,true);
+                    ev.initEvent("touchstart",true,true);
                     $box.children[1].dispatchEvent(ev);
                 })
-                $box.children[1].addEventListener("mousedown",function(e){
+                $box.children[1].addEventListener("touchstart",function(e){
                     e.target.focus();
                 })
                 $box.addEventListener("mousedown",function(e){
-//                    e.target.children[1].focus();
+                    if(e.target.getAttribute("class") != "ex") return;
+                    console.log(e.target)
+                    console.log(e.target.children[1]);
+                    e.target.children[1].focus();
                     document.querySelectorAll(".ox")[0].innerHTML = "하이제니"
                 })
                 $box.click();
