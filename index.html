@@ -115,6 +115,12 @@
                     window.removeEventListener("touchend",end);
                     console.log("touch end even fodd")
                 };
+                var vvv = document.getElementsByTagName("meta")[0];
+                var content = vvv.content;
+                var con = /(user\-scalable ?\= ?)yes|no\,/gi.exec(content);
+                console.log("-------------------------")
+                console.log(con[0])
+                console.log(con[1])
                 /*
                 var $s = document.querySelectorAll(".sel")[0];
                 var $box = document.querySelectorAll(".ex")[0];

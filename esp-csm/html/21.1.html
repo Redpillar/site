@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>esp-csm</title>
+        <link rel="stylesheet" href="../css/common.css">
+        <link rel="stylesheet" href="../css/ui.css">
+        <link rel="stylesheet" href="../css/jquery-ui.css">
+        <link rel="stylesheet" href="../css/swiper.min.css">
+        <script src="../js/jquery-1.12.4.min.js"></script>
+        <script src="../js/jquery-ui.js"></script>
+        <script src="../js/swiper-bundle.min.js"></script>
+        <script src="../js/ui.js"></script>
+    </head>
+<body>
+    <div class="wrap">
+    </div>
+    <!-- 팝업 -->
+    <div class="modalPop_wrap size-middle pop1 open">
+        <div class="inr">
+            <!-- tit -->
+            <div class="title_bar">
+                <div class="tit alert">
+                    <span class="t1">압구정점 - 맥도날드</span>
+                    <!--
+                    <span class="t2">압구정점-맥도날드</span>
+                    <span class="t3">/ DDMC-M1</span>
+                    -->
+                </div>
+                <div class="floating_right">
+                    <span class="info_box l2">
+                        MRO / CLIENT<br />
+                        설치장소명 / 주소 / 전화번호
+                    </span>
+                    <a href="javascript:;" class="btn size-s bb modal_close_bt">서비스 요청</a>
+                    <a href="javascript:;" class="btn size-s bb modal_close_bt">소모품 주문</a>
+                    <a href="javascript:;" class="btn size-s modal_close_bt">닫기</a>
+                </div>
+            </div>
+            <!-- // tit -->
+            <div class="pop_content t2">
+                <!-- layout 4box -->
+                <div class="layout_4box">
+                    <div class="inr">
+                        <ul>
+                            <!-- area -->
+                            <li>
+                                <!-- half box-->
+                                <div class="half_box basic">
+                                    <ul>
+                                        <li>
+                                            <!-- title -->
+                                            <div class="title_t2">기본정보</div>
+                                            <!-- // title -->
+                                            <div class="board_box">
+                                                <dl>
+                                                    <dt>모델명</dt>
+                                                    <dd>MM24398-123498-12</dd>
+                                                    <dt>일련번호</dt>
+                                                    <dd>DCCM288378378</dd>
+                                                    <dt>일련번호</dt>
+                                                    <dd>1.0.0</dd>
+                                                    <dt>일련번호</dt>
+                                                    <dd>2021.01.12</dd>
+                                                    <dt>일련번호</dt>
+                                                    <dd>HM-001</dd>
+                                                    <dt>일련번호</dt>
+                                                    <dd>170</dd>
+                                                </dl>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <!-- title -->
+                                            <div class="title_t2">설정정보</div>
+                                            <!-- // title -->
+                                            <div class="board_box t2">
+                                                <dl>
+                                                    <dt>실링코스</dt>
+                                                    <dd>#1</dd>
+                                                    <dt>실링온도</dt>
+                                                    <dd>170</dd>
+                                                    <dt>실링시간</dt>
+                                                    <dd>1#</dd>
+                                                    <dt>보정치</dt>
+                                                    <dd>+1</dd>
+                                                    <dt>컵인식 시간</dt>
+                                                    <dd>5s</dd>
+                                                    <dt>필름인식 시간</dt>
+                                                    <dd>5s</dd>
+                                                    <dt>실링기 동작모드</dt>
+                                                    <dd>자동</dd>
+                                                </dl>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- // half box-->
+                            </li>
+                            <!-- // area -->
+                            <!--  area -->
+                            <li>
+                                <!-- title -->
+                                <div class="title_t2">실링현황</div>
+                                <!-- // title -->
+                                <!-- chart area-->
+                                <div class="chart_area">
+                                    <!-- radio -->
+                                    <div class="radio">
+                                        <label class="input r">
+                                            <input type="radio" name="r1">
+                                            <span>월간 현황</span>
+                                        </label>
+                                        <label class="input r">
+                                            <input type="radio" name="r1">
+                                            <span>년간 현황</span>
+                                        </label>
+                                    </div>
+                                    <!-- // radio -->
+                                    <!-- top board -->
+                                    <div class="top_board">
+                                        <!-- rec box-->
+                                        <div class="rec_box">
+                                            <dl>
+                                                <dt>총 누적</dt>
+                                                <dd>3,200,000</dd>
+                                            </dl>
+                                        </div>
+                                        <!-- // rec box-->
+                                        <!-- rec box-->
+                                        <div class="rec_box gray">
+                                            <dl>
+                                                <dt>오늘</dt>
+                                                <dd>1,200</dd>
+                                                <dt>일일 평균</dt>
+                                                <dd>1,850</dd>
+                                            </dl>
+                                        </div>
+                                        <!-- // rec box-->
+                                    </div>
+                                    <!-- // top board -->
+                                    <!-- chart area -->
+                                    <div class="con">
+                                        <div class="tit">
+                                            <div class="date">2021년</div>
+                                            <div class="txt">현재 현황</div>
+                                            <button class="btn_reset"></button>
+                                        </div>
+                                        <div class="chart" style="color:#fff; background:rgba(0,0,0,0.15)"> CART AREA</div>
+                                        <!-- rec box-->
+                                        <div class="rec_box white">
+                                            <dl>
+                                                <dt>월간 누적</dt>
+                                                <dd>1,200</dd>
+                                                <dt>월 평균</dt>
+                                                <dd>1,850</dd>
+                                                <dt>일일 평균</dt>
+                                                <dd>1,850</dd>
+                                            </dl>
+                                        </div>
+                                        <!-- // rec box-->
+                                    </div>
+                                    <!-- // chart area -->
+                                </div>
+                                <!-- // chart area-->
+
+                            </li>
+                            <!-- // area -->
+                            <!--  area -->
+                            <li>
+                                <!-- title -->
+                                <div class="title_t2">이벤트 로그</div>
+                                <!-- // title -->
+                                <!-- grid box -->
+                                <div class="grid_box t2 dummy_style"><!-- dummy_style 삭제 -->
+                                    GRID AREA
+                                </div>
+                                <!-- // grid box -->
+                            </li>
+                            <!-- // area -->
+                            <!--  area -->
+                            <li>
+                                <!-- title -->
+                                <div class="title_t2">이벤트 로그</div>
+                                <!-- // title -->
+                                <!-- grid box -->
+                                <div class="grid_box t2 dummy_style"><!-- dummy_style 삭제 -->
+                                    GRID AREA
+                                </div>
+                                <!-- // grid box -->
+                            </li>
+                            <!-- // area -->
+                        </ul>
+                    </div>
+                </div>
+                <!-- layout 4box -->
+            </div>
+        </div>
+    </div>
+    <!-- // 팝업 -->
+</body>
+</html>

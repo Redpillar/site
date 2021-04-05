@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>esp-csm</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/ui.css">
+    <link rel="stylesheet" href="../css/jquery-ui.css">
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script src="../js/swiper-bundle.min.js"></script>
+    <script src="../js/ui.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="container">
+            <!-- lnb -->
+            <div class="lnb">
+                <div class="inr">
+                    <div class="top">
+                        ESP-CSM
+                        <button class="btn_lnb"></button>
+                    </div>
+                    <div class="lnb_list">
+                        <ul>
+                            <li class="home"><a href="javascript:;">운영현황판</a></li>
+                            <li class="box"><a href="javascript:;">제품관리</a></li>
+                            <li class="headset"><a href="javascript:;">서비스 데스크</a></li>
+                            <li class="alert"><a href="javascript:;">튜토리얼</a></li>
+                            <li class="setting active">
+                                <a href="javascript:;">설정</a>
+                                <div class="lbn_subList">
+                                    <ul>
+                                        <li><a href="javascript:;">내 정보 설정</a></li>
+                                        <li><a href="javascript:;">업체 관리</a></li>
+                                        <li><a href="javascript:;">사용자 관리</a></li>
+                                        <li><a href="javascript:;">소모품 규격 설정</a></li>
+                                        <li><a href="javascript:;">코드 설정</a></li>
+                                        <li><a href="javascript:;">모델설정</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- // lnb -->
+            <!-- content -->
+            <div class="content">
+                <div class="inr">
+                    <!-- sub_topbar -->
+                    <div class="sub_topBar">
+                        <div class="tit">설정 / 업체관리</div>
+                        <div class="right">
+                            <div class="search_area">
+                                <div class="searchBox t2">
+                                    <input type="text" placeholder="검색어를 입력하세요.">
+                                    <button></button>
+                                </div>
+                            </div>
+                            <div class="infoArea">
+                                <div class="user_area">
+                                    <span>홍길동</span>
+                                    <div class="pic"></div>
+                                    <div class="drop">
+                                        <a href="javascript:;">로그아웃</a>
+                                        <a href="javascript:;">내 정보 설정</a>
+                                    </div>
+                                </div>
+                                <div class="select_box t2">
+                                    <input type="text" value="한국" readonly="">
+                                    <ul>
+                                        <li>한국어</li>
+                                        <li>English</li>
+                                        <li>中文</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // sub_topbar -->
+                    <!-- subcontent wrap -->
+                    <div class="sub_content">
+                        <!-- sub con top bar -->
+                        <div class="sub_con_topBar">
+                            <div class="inr">
+                                <div class="sct_left">
+                                    <div class="state_area">
+                                        <div class="l">
+                                            업체 관리
+                                        </div>
+                                        <div class="r">
+                                            모든 업체 표시
+                                        </div>
+                                    </div>
+                                    <div class="pageCount">
+                                        <span>100</span>
+                                        / 100
+                                    </div>
+                                </div>
+                                <div class="sct_right">
+                                    <a href="javascript:;" class="link_b">업체 등록</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // sub con top bar -->
+                        <!-- grid box -->
+                        <div class="grid_box h_t1 dummy_style"><!-- dummy_style 삭제 -->
+                            Grid Area
+                        </div>
+                        <!-- // grid box -->
+                        <!-- both box -->
+                        <div class="both_box">
+                            <!-- paging -->
+                            <div class="paging">
+                                <button class="p">이전</button>
+                                <a class="active" href="javascript:;">1</a>
+                                <a href="javascript:;">2</a>
+                                <a href="javascript:;">3</a>
+                                <span class="dot">...</span>
+                                <a href="javascript:;">11</a>
+                                <a href="javascript:;">12</a>
+                                <button class="n">다음</button>
+                                <dl class="labelSelect">
+                                    <dt>페이지당 행 수 :</dt>
+                                    <dd>
+                                        <div class="select_box revert small">
+                                            <input type="text" value="10" readonly="">
+                                            <ul style="top: -148px;">
+                                                <li>10</li>
+                                                <li>20</li>
+                                                <li>30</li>
+                                                <li>40</li>
+                                                <li>50</li>
+                                            </ul>
+                                        </div>
+
+                                    </dd>
+                                </dl>
+                            </div>
+                            <!-- paging -->
+                        </div>
+                        <!-- // both box -->
+                    </div>
+                    <!-- // subcontent wrap -->
+                </div>
+            </div>
+            <!-- // content -->
+        </div>
+    </div>
+</body>
+
+</html>

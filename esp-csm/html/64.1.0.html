@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>esp-csm</title>
+        <link rel="stylesheet" href="../css/common.css">
+        <link rel="stylesheet" href="../css/ui.css">
+        <link rel="stylesheet" href="../css/jquery-ui.css">
+        <link rel="stylesheet" href="../css/swiper.min.css">
+        <script src="../js/jquery-1.12.4.min.js"></script>
+        <script src="../js/jquery-ui.js"></script>
+        <script src="../js/swiper-bundle.min.js"></script>
+        <script src="../js/ui.js"></script>
+    </head>
+<body>
+    <div class="wrap">
+        <div class="container">
+            <!-- lnb -->
+            <div class="lnb">
+                <div class="inr">
+                    <div class="top">
+                        ESP-CSM
+                        <button class="btn_lnb"></button>
+                    </div>
+                    <div class="lnb_list">
+                        <ul>
+                            <li class="home"><a href="javascript:;">운영현황판</a></li>
+                            <li class="box"><a href="javascript:;">제품관리</a></li>
+                            <li class="headset"><a href="javascript:;">서비스 데스크</a></li>
+                            <li class="alert"><a href="javascript:;">튜토리얼</a></li>
+                            <li class="setting open">
+                                <a href="javascript:;">설정</a>
+                                <div class="lbn_subList">
+                                    <ul>
+                                        <li><a href="javascript:;">내 정보 설정</a></li>
+                                        <li><a href="javascript:;">업체 관리</a></li>
+                                        <li><a href="javascript:;">사용자 관리<!-- span class="circle_box">1</!--></a></li>
+                                        <li class="active"><a href="javascript:;">소모품 규격 설정</a></li>
+                                        <li><a href="javascript:;">코드 설정</a></li>
+                                        <li><a href="javascript:;">모델설정</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- // lnb -->
+            <!-- content -->
+            <div class="content">
+                <div class="inr">
+                    <!-- sub_topbar -->
+                    <div class="sub_topBar">
+                        <div class="tit">설정 / 소모품 규격 설정</div>
+                        <div class="right">
+                            <div class="infoArea">
+                                <div class="user_area">
+                                    <span>홍길동</span>
+                                    <div class="pic"></div>
+                                    <div class="drop">
+                                        <a href="javascript:;">로그아웃</a>
+                                        <a href="javascript:;">내 정보 설정</a>
+                                    </div>
+                                </div>
+                                <div class="select_box t2">
+                                    <input type="text" value="한국" readonly="">
+                                    <ul>
+                                        <li>한국어</li>
+                                        <li>English</li>
+                                        <li>中文</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // sub_topbar -->
+                    <!-- subcontent wrap -->
+                    <div class="sub_content">
+                        <!-- tit -->
+                        <div class="title_bar">
+                            <div class="tit">
+                                <span class="t1">
+                                    소모품 규격 등록
+                                    <span class="t-b">/ FILM</span>
+                                </span>
+                                <!--
+                                <span class="t2">압구정점-맥도날드</span>
+                                <span class="t3">/ DDMC-M1</span>
+                                -->
+                            </div>
+                            <div class="floating_right">
+                                <!--
+                                <span class="info_box">
+                                    MRO 회사명 T.02-231-2323
+                                </span>
+                                <a href="javascript:;" class="btn size-s">닫기</a>
+                                <a href="javascript:;" class="btn size-s">취소</a>
+                            -->
+                                <a href="javascript:;" class="btn size-s">취소</a>
+                                <a href="javascript:;" class="btn size-s bb">등록</a>
+                            </div>
+                        </div>
+                        <!-- // tit -->
+                        <div class="half_box t2">
+                            <ul>
+                                <li>
+                                    <div class="label_box size-t2">
+                                        <div class="tit">모델명 *</div>
+                                        <input type="text" value="" placeholder="" />
+                                        <div class="tit">재질 *</div>
+                                        <input type="text" value="" placeholder="" />
+                                        <div class="tit">폭 *</div>
+                                        <input type="text" value="" placeholder="" />
+                                        <div class="tit">길이 *</div>
+                                        <input type="text" value="" placeholder="" />
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="label_box size-t2">
+                                        <div class="tit">실링가능 회수 *</div>
+                                        <input type="text" value="" placeholder="" />
+                                        <div class="tit">재질 *</div>
+                                        <input type="text" value="" placeholder="" />
+                                        <div class="tit">가격 *</div>
+                                        <input type="text" value="" placeholder="" />
+                                        <div class="tit">제조사 *</div>
+                                        <input type="text" value="" placeholder="" />
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- // subcontent wrap -->
+                </div>
+            </div>
+            <!-- // content -->
+        </div>
+    </div>
+</body>
+</html>
